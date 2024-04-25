@@ -7,7 +7,7 @@ const siteName = 'this-is-docu-demo';
 // nfp_CwBxrQ5wDEWzqVkUsQ3Lr7viENk3hDfz0838
 const config: Config = {
   title: 'My Site',
-  tagline: 'Dinosaurs are cool, I THINK IT IS TRUE',
+  tagline: 'Dinosaurs are cool, IS IT TRUE?',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
