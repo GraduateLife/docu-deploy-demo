@@ -1,6 +1,7 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import { pwa } from './src/plugins/pwa';
 
 const siteName = 'this-is-docu-demo';
 // nfp_CwBxrQ5wDEWzqVkUsQ3Lr7viENk3hDfz0838
@@ -22,6 +23,8 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+
+  plugins: [pwa],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
