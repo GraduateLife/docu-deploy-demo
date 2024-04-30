@@ -6,7 +6,7 @@ import { createGlobalState } from 'react-hooks-global-state';
 // import SpreadBlogsPlugin from './src/plugins/spearedBlogs';
 
 const netlify_app = 'https://this-is-deploy-demo.netlify.app';
-const github_app = 'https://github.com/';
+const github_app = 'https://graduatelife.github.io';
 
 const config: Config = {
   title: 'My Site',
@@ -14,7 +14,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: netlify_app,
+  url: github_app,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
