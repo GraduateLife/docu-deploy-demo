@@ -22,7 +22,8 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'GraduateLife', // Usually your GitHub org/user name.
-  projectName: 'docu-deploy-demo', // Usually your repo name.
+  projectName: 'graduatelife.github.io',
+  deploymentBranch: 'gh-pages', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
