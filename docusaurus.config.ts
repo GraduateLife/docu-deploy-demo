@@ -5,7 +5,8 @@ import { pwa } from './src/plugins/pwa';
 import { createGlobalState } from 'react-hooks-global-state';
 // import SpreadBlogsPlugin from './src/plugins/spearedBlogs';
 
-const siteName = 'this-is-docu-demo';
+const netlify_app = 'https://this-is-deploy-demo.netlify.app';
+const github_app = 'https://github.com/';
 
 const config: Config = {
   title: 'My Site',
@@ -13,15 +14,15 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: `https://${siteName}.netlify.app`,
+  url: netlify_app,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'GraduateLife', // Usually your GitHub org/user name.
+  projectName: 'docu-deploy-demo', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
