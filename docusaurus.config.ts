@@ -2,9 +2,11 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import { pwa } from './src/plugins/pwa';
+import { createGlobalState } from 'react-hooks-global-state';
+// import SpreadBlogsPlugin from './src/plugins/spearedBlogs';
 
 const siteName = 'this-is-docu-demo';
-// nfp_CwBxrQ5wDEWzqVkUsQ3Lr7viENk3hDfz0838
+
 const config: Config = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool, IS IT TRUE?',
@@ -23,8 +25,8 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
-  plugins: [pwa],
+  // './speared-blogs-plugin'
+  plugins: [pwa, ['./src/plugins/blog-content-plugin-enhance', {}]],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -45,13 +47,7 @@ const config: Config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },

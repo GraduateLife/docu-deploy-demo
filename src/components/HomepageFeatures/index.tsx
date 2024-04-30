@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import { usePluginData } from '@docusaurus/useGlobalData';
 
 type FeatureItem = {
   title: string;
@@ -41,7 +42,7 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -56,9 +57,14 @@ function Feature({title, Svg, description}: FeatureItem) {
 }
 
 export default function HomepageFeatures(): JSX.Element {
+  const X = usePluginData('docusaurus-plugin-content-blog');
+  console.log(X);
   return (
     <section className={styles.features}>
       <div className="container">
+        {X.__FrontMatters__.map((item) => {
+          return <>{item.amitest ?? '   nono'}</>;
+        })}
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
